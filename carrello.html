@@ -1,0 +1,82 @@
+<!--DOCTYPE html-->
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!--==title==========================-->
+<title>Carrello - Ecommerce Electronic Store HTML CSS</title>
+<!--==CSS============================-->
+<link href="../static/style.css" rel="stylesheet"/>
+<!--==fav-icon=======================-->
+<link href="images/favicon.png" rel="shortcut icon">
+<!--==import-poppins-font============-->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"/>
+<!--==Font-Awesome-for-icons=========-->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet"/>
+<script defer src="../static/carrello.js"></script>
+</head>
+<body>
+    <!--==top-bar==================================-->
+    <div class="nav-top-bar">
+        <span>20% Di Sconto Per Tutte Le Offerte E Categorie, Fai Il Tuo Ordine Ora.</span>
+    </div>
+    <!--==nav=======================================-->
+    <nav class="navigation">
+        <!--**logo********-->
+
+        <a href="user_dashboard" class="logo">
+            <img src="../static/images/logo_normale_v2.png" />
+        </a>
+
+        <!--**menu-btn****-->
+        <input class="menu-btn" id="menu-btn" type="checkbox"/>
+        <label class="menu-icon" for="menu-btn">
+            <span class="nav-icon"></span>
+        </label>
+        <!--**menu********-->
+        <ul class="menu">
+            <li>
+                <a href="hot_products.html">Prodotti</a>
+            </li>
+            <li><a href="mailto:bernaciakpatryk0@mail.com">Contattaci</a></li>
+        </ul>
+        <!--**nav-btns****-->
+        <div class="nav-btns">
+            <!--search-->
+            <input id="nav-search-btn" type="checkbox"/>
+            <label class="nav-search" for="nav-search-btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <!--search-container-->
+                <form action="">
+                    <!--close-->
+                    <label class="nav-search-close" for="nav-search-btn">
+                        <i class="fa-solid fa-xmark"></i>
+                    </label>
+                    <!--box-->
+                    <div class="nav-search-box">
+                        <input placeholder="Search Product's" required="" type="text"/>
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </form>
+            </label>
+            <!--user-->
+            <a class="nav-user" href="#">
+                <i class="fa-solid fa-user"></i>
+            </a>
+            <!--cart-->
+            <a class="nav-cart" href="carrello.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>0</span>
+            </a>
+        </div>
+    </nav><!--nav-end-->
+    <section class="carrello">
+        <h1 style="justify-content: center;">Il tuo Carrello</h1>
+        <div id="carrello-container"></div>
+        <button id="svuota-carrello" onclick="svuotaCarrello()">Svuota Carrello</button>
+    </section>
+    </body>
+</html>

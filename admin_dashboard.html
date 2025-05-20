@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='styleAdminDash.css') }}">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Benvenuto, Admin</h2>
+        <div class="profile">
+            <span>Profilo Admin</span>
+            <a href="/loginRegister">Logout</a>
+        </div>
+
+        <div class="dropdown">
+            <label for="role-select">Seleziona un Ruolo:</label>
+            <select id="role-select" onchange="filterUsers()">
+                <option value="cliente">Cliente</option>
+                <option value="dipendente">Dipendente</option>
+                <option value="fornitore">Fornitore</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <h2>Gestione Utenti</h2>
+
+        <!-- User List -->
+        <div id="users-list">
+            <!-- The list of users will be dynamically loaded here based on selected role -->
+        </div>
+
+        <!-- Add New User Form -->
+        <h3>Aggiungi Nuovo Utente</h3>
+        <form action="/admin_dashboard" method="POST">
+            <div class="input-group">
+                <label for="new_username">Username:</label>
+                <input type="text" name="new_username" id="new_username" required>
+            </div>
+            <div class="input-group">
+                <label for="new_email">Email:</label>
+                <input type="email" name="new_email" id="new_email" required>
+            </div>
+            <div class="input-group">
+                <label for="new_password">Password:</label>
+                <input type="password" name="new_password" id="new_password" required>
+            </div>
+            <div class="input-group">
+                <label for="new_role">Ruolo:</label>
+                <select name="new_role" id="new_role" required>
+                    <option value="cliente">Cliente</option>
+                    <option value="admin">Admin</option>
+                    <option value="fornitore">Fornitore</option>
+                    <option value="dipendente">Dipendente</option>
+                </select>
+            </div>
+            <button type="submit">Aggiungi Utente</button>
+        </form>
+    </div>
+
+    <script>
+        function filterUsers() {
+            const role = document.getElementById('role-select').value;
+            fetch(`/admin_dashboard/${role}`)
+                .then(response => response.json())
+                .then(data => {
+                    const usersList = document.getElementById('users-list');
+                    let html = `
+                        <h3>Lista ${role.charAt(0).toUpperCase() + role.slice(1)}s</h3>
+                        <table>
+                            <tr>
+                                <th>Username</th>
+                                <th>Email</th>
+                                <th>Ruolo</th>
+                                <th>Azioni</th>
+                            </tr>
+                    `;
+                    data.users.forEach(user => {
+                        html += `
+                            <tr>
+                                <td>${user.username}</td>
+                                <td>${user.email}</td>
+                                <td>${user.ruolo}</td>
+                                <td class="action-links">
+                                    <a href="/admin_dashboard/edit/${user.username}">Modifica</a> |
+                                    <a href="/admin_dashboard/delete/${user.username}" onclick="return confirm('Sei sicuro di voler eliminare questo utente?')">Elimina</a>
+                                </td>
+                            </tr>
+                        `;
+                    });
+                    html += '</table>';
+                    usersList.innerHTML = html;
+                })
+                .catch(error => {
+                    console.error('Errore nel recupero dei dati:', error);
+                });
+        }
+
+        // Load the user list on page load
+        window.onload = filterUsers;
+    </script>
+</body>
+</html>

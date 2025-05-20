@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', path='styleLogin.css') }}">
+    <title>Invio Codice - App</title>
+</head>
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form action="/inviaCodice" method="post">
+                <h1>Invia Codice di Verifica</h1>
+                
+                <div class="input-group">
+                    <input type="email" name="email" id="email" required placeholder="Email">
+                </div>
+
+                
+                <button type="submit">Invia Codice</button>
+
+                <!-- Messaggi di successo o errore -->
+                {% if message %}
+                    <div class="success-message">{{ message }}</div>
+                {% elif error %}
+                    <div class="error-message">{{ error }}</div>
+                {% endif %}
+            </form>
+        </div>
+
+        <!-- Pannelli di transizione -->
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h2>Hai dimenticato la tua password? Ricevi un codice di verifica!</h2> 
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Invio Codice</h1>
+                    <p>Invio codice per recupero password</p>
+                    <button class="hidden" id="register">invio codice</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', path='script.js') }}"></script>
+
+</body>
+</html>

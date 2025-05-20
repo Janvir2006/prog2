@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambia Password - App</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Cambia la tua Password</h2>
+
+    <form action="/cambiaPass" method="post">
+        <div class="input-group">
+            <input type="email" name="email" id="email" required>
+            <label for="email">Email</label>
+        </div>
+        <div class="input-group">
+            <input type="text" name="codice" id="codice" required>
+            <label for="codice">Codice di Verifica</label>
+        </div>
+        <div class="input-group">
+            <input type="password" name="new_password" id="new_password" required>
+            <label for="new_password">Nuova Password</label>
+        </div>
+
+        <button type="submit">Cambia Password</button>
+    </form>
+
+    <div class="links">
+        <a href="/loginRegister">Hai già un account? Accedi</a>
+    </div>
+
+    {% if success %}
+        <div class="success-message">{{ success }}</div>
+    {% elif error %}
+        <div class="error-message">{{ error }}</div>
+    {% endif %}
+</div>
+
+</body>
+</html>

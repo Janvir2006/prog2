@@ -1,0 +1,446 @@
+<!--DOCTYPE html-->
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!--==title==========================-->
+<title>Ecommerce Electronic Store HTML CSS</title>
+<!--==CSS============================-->
+<link href="../static/style.css" rel="stylesheet"/>
+<!--==fav-icon=======================-->
+<link href="images/favicon.png" rel="shortcut icon">
+<!--==import-poppins-font============-->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"/>
+<!--==Font-Awesome-for-icons=========-->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet"/>
+</link>
+<script src="../static/carrello.js"></script>
+</head>
+
+<body>
+
+    <!--==top-bar==================================-->
+    <div class="nav-top-bar">
+        <span>20% Di Sconto Per Tutte Le Offerte E Categorie, Fai Il Tuo Ordine Ora.</span>
+    </div>
+    <!--==nav=======================================-->
+    <nav class="navigation">
+        <!--**logo********-->
+
+        <a href="user_dashboard" class="logo">
+            <img src="../static/images/logo_normale_v2.png" />
+        </a>
+
+        <!--**menu-btn****-->
+        <input class="menu-btn" id="menu-btn" type="checkbox"/>
+        <label class="menu-icon" for="menu-btn">
+            <span class="nav-icon"></span>
+        </label>
+        <!--**menu********-->
+        <ul class="menu">
+            <li>
+                <a href="hot_products.html">Prodotti</a>
+                
+            </li>
+            <li><a href="#popular-product">Popolari</a></li>
+            <li><a href="mailto:bernaciakpatryk0@mail.com">Contattaci</a></li>
+        </ul>
+        <!--**nav-btns****-->
+        <div class="nav-btns">
+            <!--search-->
+            <input id="nav-search-btn" type="checkbox"/>
+            <label class="nav-search" for="nav-search-btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <!--search-container-->
+                <form action="">
+                    <!--close-->
+                    <label class="nav-search-close" for="nav-search-btn">
+                        <i class="fa-solid fa-xmark"></i>
+                    </label>
+                    <!--box-->
+                    <div class="nav-search-box">
+                        <input placeholder="Search Product's" required="" type="text"/>
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </form>
+            </label>
+            <!--user-->
+            <a class="nav-user" href="#">
+                <i class="fa-solid fa-user"></i>
+            </a>
+            <!--cart-->
+            <a class="nav-cart" href="carrello.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>0</span>
+            </a>
+        </div>
+    </nav><!--nav-end-->
+    <!--==main=============================-->
+    <section id="main">
+        <!--**text*********-->
+        <div class="main-text">
+            <h1><span>Negozio Online Di Apparecchiature Elettroniche</span></h1>
+            <p>Progetto interdisciplinare di: Bernaciak Patryk, Canovi Luca, Singh janvir</p>
+            <a href="hot_products.html">Prodotti</a>
+        </div>
+        <!--**img**********-->
+        <div class="main-bg">
+            <img src="../static/images/image-apple.png"/>
+        </div>
+    </section><!--main-end-->
+    <!--==Recent-Product=========================-->
+    <section class="recent-product">
+        <!--**heading********************-->
+        <div class="product-heading">
+            <h3>Prodotti Recenti</h3>
+            <a>All</a>
+        </div>
+        <!--**container******************-->
+        <div class="r-product-container">
+            <!--*box1*-->
+            <div class="r-product-box">
+                <!--img-->
+                <div class="r-product-img">
+                    <img src="../static/images/h1.png">
+                </img></div>
+                <!--text-->
+                <div class="r-product-text">
+                    <!--title-->
+                    <a class="product-box-p-name" href="#">Wireless Headphone's For PC</a>
+                    <!--category-->
+                    <span class="p-box-category">
+                        <a>Electronic</a> &gt; <a>Computer Accsories</a>
+                    </span>
+                    <!--price-->
+                    <span class="p-box-price">$35.55 <del>$50</del></span><button onclick="aggiungiAlCarrello('Wireless Headphone\'s For PC', 35.55,'../static/images/h1.png')">Aggiungi al carrello<i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div><!--box-end-->
+            <!--*box2*-->
+            <div class="r-product-box">
+                <!--img-->
+                <div class="r-product-img">
+                    <img src="..\static\images\h2.png">
+                </img></div>
+                <!--text-->
+                <div class="r-product-text">
+                    <!--title-->
+                    <a class="product-box-p-name" href="#">HP i5 6th Genration Touch laptop </a>
+                    <!--category-->
+                    <span class="p-box-category">
+                        <a>Electronic</a> &gt; <a>Computer Accsories</a>
+                    </span>
+                    <!--price-->
+                    <span class="p-box-price">$1000.55 <del>$1200</del></span><button onclick="aggiungiAlCarrello('HP i5 6th Genration Touch laptop', 1000.55,'../static/images/h2.png')">aggiungi al carrello<i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div><!--box-end-->
+            <!--*box3*-->
+            <div class="r-product-box">
+                <!--img-->
+                <div class="r-product-img">
+                    <img src="..\static\images\h3.png">
+                </img></div>
+                <!--text-->
+                <div class="r-product-text">
+                    <!--title-->
+                    <a class="product-box-p-name" href="#">Apply 7 Smart Watch</a>
+                    <!--category-->
+                    <span class="p-box-category">
+                        <a>Electronic</a> &gt; <a>Mobile Accsories</a>
+                    </span>
+                    <!--price-->
+                    <span class="p-box-price">$50.55 <del>$80</del></span><button onclick="aggiungiAlCarrello('Apply 7 Smart Watch', 50.55,'../static/images/h3.png')">aggiungi al carrello<i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div><!--box-end-->
+            <!--*box4*-->
+            <div class="r-product-box">
+                <!--img-->
+                <div class="r-product-img">
+                    <img src="..\static\images\h4.jpg">
+                </img></div>
+                <!--text-->
+                <div class="r-product-text">
+                    <!--title-->
+                    <a class="product-box-p-name" href="#">Redmi HeandFree For Android</a>
+                    <!--category-->
+                    <span class="p-box-category">
+                        <a>Electronic</a> &gt; <a>Mobile Accsories</a>
+                    </span>
+                    <!--price-->
+                    <span class="p-box-price">$5.55 <del>$10</del></span><button onclick="aggiungiAlCarrello('Redmi HeandFree For Android', 5.55,'../static/images/h4.jpg')">aggiungi al carrello<i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div><!--box-end-->
+            <!--*box5*-->
+            <div class="r-product-box">
+                <!--img-->
+                <div class="r-product-img">
+                    <img src="..\static\images\h5.png"/>
+                </div>
+                <!--text-->
+                <div class="r-product-text">
+                    <!--title-->
+                    <a class="product-box-p-name" href="product_page.html">Web Camera For PC</a>
+                    <!--category-->
+                    <span class="p-box-category">
+                        <a>Electronic</a> &gt; <a>Computer Accsories</a>
+                    </span>
+                    <!--price-->
+                    <span class="p-box-price">$45.55 <del>$50</del></span><button onclick="aggiungiAlCarrello('Web Camera For PC', 45.55,'../static/images/h5.png')">aggiungi al carrello<i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div><!--box-end-->
+            <!--*box6*-->
+            <div class="r-product-box">
+                <!--img-->
+                <div class="r-product-img">
+                    <img src="..\static\images\h6.jpg"/>
+                </div>
+                <!--text-->
+                <div class="r-product-text">
+                    <!--title-->
+                    <a class="product-box-p-name" href="#">Wireless Mouse For PC</a>
+                    <!--category-->
+                    <span class="p-box-category">
+                        <a>Electronic</a> &gt; <a>Computer Accsories</a>
+                    </span>
+                    <!--price-->
+                    <span class="p-box-price">$15.55 <del>$50</del></span><button onclick="aggiungiAlCarrello('Wireless Mouse For PC', 15.55,'../static/images/h6.jpg')">aggiungi al carrello<i class="fa-solid fa-cart-shopping"></i></button>
+                </div>
+            </div><!--box-end-->
+        </div>
+    </section><!--recent-end-->
+
+    <!--==Sale==================================-->
+    <section class="sale">
+        <!--**box1**********************-->
+        <div class="sale-box">
+            <!--img-->
+            <img src="../static/images/sale-1.jpg"/>
+            <!--text-->
+            <a class="sale-text" href="#">
+                <strong>Laptop With Touch Screen</strong>
+                <span>Sale Off 25%</span>
+            </a>
+        </div>
+        <!--**box2**********************-->
+        <div class="sale-box">
+            <!--img-->
+            <img src="..\static/images/sale-2.jpg"/>
+            <!--text-->
+            <a class="sale-text" href="#">
+                <strong>Apple Smart Watch</strong>
+                <span>Sale Off 25%</span>
+            </a>
+        </div>
+        <!--**box3**********************-->
+        <div class="sale-box">
+            <!--img-->
+            <img src="..\static\images\sale-3.jpg"/>
+            <!--text-->
+            <a class="sale-text" href="#">
+                <strong>Android Wire Handfree</strong>
+                <span>Sale Off 25%</span>
+            </a>
+        </div>
+    </section><!--sale-end-->
+    <!--==Popular-product's===========================-->
+    <section id="popular-product">
+        <!--**heading********************-->
+        <div class="product-heading">
+            <h3>Prodotti Popolari</h3>
+            <a>All</a>
+        </div>
+        <!--**container*****************-->
+        <div class="popular-product-container">
+            <!--**box1***-->
+            <div class="product-box">
+                <!--img-->
+                <a class="product-img" href="product_page.html">
+                    <img alt="" src="..\static\images\p1.png"/>
+                </a>
+                <!--text-->
+                <div class="product-text">
+                    <!--title-->
+                    <a class="product-box-p-name" href="#">Web Camera For PC</a>
+                    <!--category-->
+                    <span class="p-box-category">
+                        <a>Electronic</a> &gt; <a>Computer Accsories</a>
+                    </span>
+                    <!--details-->
+                    <p>descrizione</p>
+                    <!--price-->
+                    <span class="p-box-price">$45 <del>$60</del></span><button onclick="aggiungiAlCarrello('Web Camera For PC', 45,'../static/images/p1.png')">aggiungi al carrello<i class="fa-solid fa-cart-shopping"></i></button>
+                    
+                </div>
+            </div><!--box-end-->
+            <!--**box2***-->
+            <div class="product-box">
+                <!--img-->
+                <a class="product-img" href="#">
+                    <img alt="" src="..\static\images\p2.png"/>
+                </a>
+                <!--text-->
+                <div class="product-text">
+                    <!--title-->
+                    <a class="product-box-p-name" href="#">Wireless Mouse For PC</a>
+                    <!--category-->
+                    <span class="p-box-category">
+                        <a>Electronic</a> &gt; <a>Computer Accsories</a>
+                    </span>
+                    <!--details-->
+                    <p>descrizione</p>
+                    <!--price-->
+                    <span class="p-box-price">$25 <del>$40</del></span><button onclick="aggiungiAlCarrello('Wireless Mouse For PC', 25,'../static/images/p2.png')">aggiungi al carrello<i class="fa-solid fa-cart-shopping"></i></button>
+                    
+                </div>
+            </div><!--box-end-->
+            <!--**box3***-->
+            <div class="product-box">
+                <!--img-->
+                <a class="product-img" href="#">
+                    <img alt="" src="..\static\images\p3.png"/>
+                </a>
+                <!--text-->
+                <div class="product-text">
+                    <!--title-->
+                    <a class="product-box-p-name" href="#">Touch HP Laptop</a>
+                    <!--category-->
+                    <span class="p-box-category">
+                        <a>Electronic</a> &gt; <a>Computer Accsories</a>
+                    </span>
+                    <!--details-->
+                    <p>descrizione</p>
+                    <!--price-->
+                    <span class="p-box-price">$1000 <del>$1200</del></span><button onclick="aggiungiAlCarrello('Touch HP Laptop', 1000,'../static/images/p3.png')">aggiungi al carrello<i class="fa-solid fa-cart-shopping"></i></button>
+                    
+                </div>
+            </div><!--box-end-->
+            <!--**box4***-->
+            <div class="product-box">
+                <!--img-->
+                <a class="product-img" href="#">
+                    <img alt="" src="..\static\images\p4.png"/>
+                </a>
+                <!--text-->
+                <div class="product-text">
+                    <!--title-->
+                    <a class="product-box-p-name" href="#">HeadPhone's For PC</a>
+                    <!--category-->
+                    <span class="p-box-category">
+                        <a>Electronic</a> &gt; <a>Computer Accsories</a>
+                    </span>
+                    <!--details-->
+                    <p>descrizione</p>
+                    <!--price-->
+                    <span class="p-box-price">$125 <del>$200</del></span><button onclick="aggiungiAlCarrello('HeadPhone\'s For PC', 125,'../static/images/p4.png')">aggiungi al carrello<i class="fa-solid fa-cart-shopping"></i></button>
+                    
+                </div>
+            </div><!--box-end-->
+            <!--**box5***-->
+            <div class="product-box">
+                <!--img-->
+                <a class="product-img" href="#">
+                    <img alt="" src="..\static\images\p5.png"/>
+                </a>
+                <!--text-->
+                <div class="product-text">
+                    <!--title-->
+                    <a class="product-box-p-name" href="#">DSLR Camera</a>
+                    <!--category-->
+                    <span class="p-box-category">
+                        <a>Electronic</a> &gt; <a>Camera Accsories</a>
+                    </span>
+                    <!--details-->
+                    <p>descrizione</p>
+                    <!--price-->
+                    <span class="p-box-price">$500 <del>$600</del></span><button onclick="aggiungiAlCarrello('DSLR Camera', 500,'../static/images/p5.png')">aggiungi al carrello<i class="fa-solid fa-cart-shopping"></i></button>
+                    
+                </div>
+            </div><!--box-end-->
+        </div>
+    </section><!--==popular-end===-->
+    <!--==contact===============================-->
+    <section class="home-contact">
+        <!--text-->
+        <div class="h-contact-text">
+            <span>Supporto</span>
+            <h3>Hai Bisogno Di Aiuto?</h3>
+            <a href="mailto:example@gmail.com">Contattaci</a>
+        </div>
+        <!--img-->
+        <img class="contact-bg-right" src="..\static\images\contact_bg.webp">
+        <img class="contact-bg-left" src="..\static\images\contact_bg1.jpg"/>
+    </img></section><!--contact-end-->
+    <!--==Services==============================-->
+    <section class="services">
+        <!--**box1**************-->
+        <div class="services-box">
+            <i class="fa-solid fa-truck-fast"></i>
+            <span>Consegne Gratis</span>
+            <p>Consegne Gratis Per Tutti I Tuoi Prodotti</p>
+        </div>
+        <!--**box2**************-->
+        <div class="services-box">
+            <i class="fa-solid fa-headphones-simple"></i>
+            <span>Supporto 24/7</span>
+            <p>Noi Supportiamo 24h al giorno</p>
+        </div>
+        <!--**box**************-->
+        <div class="services-box">
+            <i class="fa-solid fa-rotate"></i>
+            <span>100% Rimborso</span>
+            <p>Hai 30 Giorni Per Fare Rimborso</p>
+        </div>
+    </section><!--services-end-->
+    <!--==Footer=================================-->
+    <footer>
+        <!--**payment-method******************-->
+        <div class="footer-payment">
+            <!--logo's-->
+            <div class="footer-payment-logos">
+                <img alt="" src="..\static\images\master_card.png"/>
+                <img alt="" src="..\static\images\visa.png"/>
+                <img alt="" src="..\static\images\paypal.png"/>
+                <img alt="" src="..\static\images\ebay.png"/>
+            </div>
+            <!--text-->
+            <strong>Metodi Di Pagamento Sicuri</strong>
+        </div>
+        <!--**container***********************-->
+        <div class="footer-container">
+            <!--**company**-->
+            <div class="footer-company-box">
+                <!--social-box-->
+                <div class="footer-social">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+            <!--**link-box**-->
+            <div class="footer-link-box">
+                <strong>Link Principali</strong>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Chi Siamo</a></li>
+                    <li><a href="#">Contattaci</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </div>
+            <!--**link-box**-->
+            <div class="footer-link-box">
+                <strong>Link Esterni</strong>
+                <ul>
+                    <li><a href="hot_products.html">Nostri Prodotti</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                </ul>
+            </div>
+            
+        </div><!--container-end-->
+        
+    </footer>
+</body>
+</html>

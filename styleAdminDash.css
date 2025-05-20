@@ -1,0 +1,160 @@
+/* General Body and Layout Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #f4f4f4;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebar h2 {
+    margin-top: 10;
+}
+
+.sidebar .profile {
+    color: red;
+    margin-top: 20px;
+}
+
+.sidebar .profile a {
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.sidebar .profile a:hover {
+    text-decoration: underline;
+}
+
+.dropdown {
+    margin-top: 20px;
+}
+
+.dropdown select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 250px;
+    background-color: #fff;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #333;
+    margin-top: 30px;
+}
+
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+form button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+form button:active {
+    background-color: #388e3c;
+}
+
+form input:focus, form button:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+table th {
+    background-color: #f4f4f4;
+}
+
+.action-links {
+    font-size: 14px;
+}
+
+.action-links a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.action-links a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #888;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
